@@ -63,8 +63,8 @@
 ;; function-args
 (require 'function-args)
 (fa-config-default)
-(define-key c-mode-map  [(tab)] 'moo-complete)
-(define-key c++-mode-map  [(tab)] 'moo-complete)
+;;(define-key c-mode-map  [(tab)] 'moo-complete)
+;;(define-key c++-mode-map  [(tab)] 'moo-complete)
 
 ;; company
 (require 'company)

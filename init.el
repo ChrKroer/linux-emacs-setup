@@ -3,7 +3,7 @@
 	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
-(load-theme 'monochrome)
+(load-theme 'tango-dark)
 
 (menu-bar-mode 0)
 (tool-bar-mode 0)

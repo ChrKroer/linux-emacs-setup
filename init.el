@@ -172,6 +172,20 @@
  '(custom-safe-themes
    (quote
     ("73aaeaaef16976fd7b459ccd6fb3a2232a955b77738c19ad1a6f7b7a0821b2d6" default)))
+ '(ess-R-font-lock-keywords
+   (quote
+    ((ess-R-fl-keyword:modifiers . t)
+     (ess-R-fl-keyword:fun-defs . t)
+     (ess-R-fl-keyword:keywords . t)
+     (ess-R-fl-keyword:assign-ops . t)
+     (ess-R-fl-keyword:constants . t)
+     (ess-fl-keyword:fun-calls . t)
+     (ess-fl-keyword:numbers . t)
+     (ess-fl-keyword:operators . t)
+     (ess-fl-keyword:delimiters . t)
+     (ess-fl-keyword:= . t)
+     (ess-R-fl-keyword:F&T . t)
+     (ess-R-fl-keyword:%op% . t))))
  '(safe-local-variable-values
    (quote
     ((company-clang-arguments "-I/Users/ckroer/Documents/research/equilibrium_computation/mirror_prox/libdub/include" "/Users/ckroer/Documents/research/equilibrium_computation/mirror_prox/libdub/math/include")))))

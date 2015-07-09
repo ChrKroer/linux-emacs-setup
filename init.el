@@ -60,7 +60,7 @@
 ;; (require 'setup-ggtags)
 (require 'setup-cedet)
 (require 'setup-editing)
-
+(require 'setup-r-lang)
 (windmove-default-keybindings)
 
 ;; function-args

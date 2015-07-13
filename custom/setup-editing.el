@@ -306,4 +306,11 @@ Position the cursor at it's beginning, according to the current mode."
 (global-set-key (kbd "M-o") 'prelude-smart-open-line)
 (global-set-key (kbd "M-o") 'open-line)
 
+(global-set-key (kbd "C-.") 'other-window)
+(global-set-key (kbd "C-,") 'prev-window)
+
+(defun prev-window ()
+  (interactive)
+  (other-window -1))
+
 (provide 'setup-editing)

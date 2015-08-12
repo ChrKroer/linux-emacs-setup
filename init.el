@@ -35,7 +35,9 @@
     volatile-highlights
     undo-tree
     zygospore
+    evil
     ess
+    jabber
     ))
 
 (defun install-packages ()

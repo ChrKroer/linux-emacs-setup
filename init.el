@@ -64,6 +64,7 @@
 (require 'setup-editing)
 (require 'setup-r-lang)
 (require 'setup-computer-specific)
+(require 'setup-python)
 (windmove-default-keybindings)
 
 ;; function-args
@@ -175,7 +176,8 @@
  '(package-selected-packages
    (quote
     (jabber zygospore yasnippet ws-butler volatile-highlights smartparens iedit helm-swoop helm-projectile helm-gtags ggtags function-args evil ess duplicate-thing dtrt-indent company comment-dwim-2 clean-aindent-mode anzu)))
- '(python-shell-interpreter local-python-path))
+ '(python-shell-interpreter local-python-path)
+ )
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

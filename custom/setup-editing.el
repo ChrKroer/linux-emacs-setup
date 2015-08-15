@@ -1,4 +1,12 @@
 ;; GROUP: Editing -> Editing Basics
+(require 'evil)
+(evil-mode 1)
+(define-key evil-normal-state-map (kbd "C-.") nil)
+(define-key evil-normal-state-map (kbd "<remap> <evil-next-line>") 'evil-next-visual-line)
+(define-key evil-normal-state-map (kbd "<remap> <evil-previous-line>") 'evil-previous-visual-line)
+(define-key evil-motion-state-map (kbd "<remap> <evil-next-line>") 'evil-next-visual-line)
+(define-key evil-motion-state-map (kbd "<remap> <evil-previous-line>") 'evil-previous-visual-line)
+(define-key evil-motion-state-map (kbd "<remap> <evil-end-of-line>") 'evil-end-of-visual-line)
 
 (setq global-mark-ring-max 5000         ; increase mark ring to contains 5000 entries
       mark-ring-max 5000                ; increase kill ring to contains 5000 entries

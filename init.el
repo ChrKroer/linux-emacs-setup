@@ -144,7 +144,7 @@
 ;; Package: yasnippet
 (require 'yasnippet)
 (yas-global-mode 1)
-(setq python-python-command "~/your/python/bin-dir/python")
+
 ;; Package: smartparens
 (require 'smartparens-config)
 (setq sp-base-key-bindings 'paredit)
@@ -174,7 +174,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (ess zygospore undo-tree volatile-highlights smartparens yasnippet iedit ws-butler dtrt-indent comment-dwim-2 clean-aindent-mode function-args helm-swoop helm-projectile helm-gtags helm ggtags duplicate-thing company anzu)))
+    (jabber zygospore yasnippet ws-butler volatile-highlights smartparens iedit helm-swoop helm-projectile helm-gtags ggtags function-args evil ess duplicate-thing dtrt-indent company comment-dwim-2 clean-aindent-mode anzu)))
  '(python-shell-interpreter local-python-path))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

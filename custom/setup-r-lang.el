@@ -1,9 +1,19 @@
+;ess-mode configuration
 (setq ess-ask-for-ess-directory nil)
+(setq inferior-R-program-name "/usr/local/bin/R")
 (setq ess-local-process-name "R")
 (setq ansi-color-for-comint-mode 'filter)
 (setq comint-scroll-to-bottom-on-input t)
 (setq comint-scroll-to-bottom-on-output t)
 (setq comint-move-point-for-output t)
+(setq ess-eval-visibly-p nil)
+
+;; (setq ess-ask-for-ess-directory nil)
+;; (setq ess-local-process-name "R")
+;; (setq ansi-color-for-comint-mode 'filter)
+;; (setq comint-scroll-to-bottom-on-input t)
+;; (setq comint-scroll-to-bottom-on-output t)
+;; (setq comint-move-point-for-output t)
 (defun my-ess-start-R ()
   (interactive)
   (if (not (member "*R*" (mapcar (function buffer-name) (buffer-list))))
@@ -32,5 +42,14 @@
           '(lambda()
              (local-set-key [(shift return)] 'my-ess-eval)))
 (require 'ess-site)
+
+(ess-toggle-underscore nil)
+
+(defun rmd-mode ()
+  "ESS Markdown mode for rmd files"
+  (interactive)
+  (require 'poly-R)
+  (require 'poly-markdown)
+  (poly-markdown+r-mode))
 
 (provide 'setup-r-lang)

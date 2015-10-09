@@ -16,28 +16,32 @@
 
 (defconst demo-packages
   '(anzu
+    auctex
+    clean-aindent-mode
+    comment-dwim-2
     company
+    dtrt-indent
     duplicate-thing
+    ein
+    ess
+    evil
+    function-args
     ggtags
     helm
     helm-gtags
     helm-projectile
     helm-swoop
-    function-args
-    clean-aindent-mode
-    comment-dwim-2
-    dtrt-indent
-    ws-butler
     iedit
-    yasnippet
-    smartparens
-    projectile
-    volatile-highlights
-    undo-tree
-    zygospore
-    evil
-    ess
     jabber
+    markdown-mode
+    polymode
+    projectile
+    smartparens
+    undo-tree
+    volatile-highlights
+    ws-butler
+    yasnippet
+    zygospore
     ))
 
 (defun install-packages ()
@@ -57,15 +61,18 @@
 
 (add-to-list 'load-path "~/.emacs.d/custom")
 
-(require 'setup-helm)
-(require 'setup-helm-gtags)
 ;; (require 'setup-ggtags)
 (require 'setup-cedet)
 (require 'setup-editing)
+(require 'setup-helm)
+(require 'setup-helm-gtags)
+(require 'setup-latex)
+(require 'setup-python)
 (require 'setup-r-lang)
 (require 'setup-computer-specific)
-(require 'setup-python)
 (windmove-default-keybindings)
+
+(require 'ein)
 
 ;; function-args
 (require 'function-args)
@@ -166,6 +173,7 @@
 (setq projectile-completion-system 'helm)
 (setq projectile-indexing-method 'alien)
 
+(setq python-shell-interpreter local-python-path)
 ;; Package zygospore
 (global-set-key (kbd "C-x 1") 'zygospore-toggle-delete-other-windows)
 (custom-set-variables
@@ -175,9 +183,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (jabber zygospore yasnippet ws-butler volatile-highlights smartparens iedit helm-swoop helm-projectile helm-gtags ggtags function-args evil ess duplicate-thing dtrt-indent company comment-dwim-2 clean-aindent-mode anzu)))
- '(python-shell-interpreter local-python-path)
- )
+    (markdown-mode polymode zygospore yasnippet ws-butler volatile-highlights smartparens jabber iedit helm-swoop helm-projectile helm-gtags ggtags function-args evil ess ein duplicate-thing dtrt-indent company comment-dwim-2 clean-aindent-mode auctex anzu))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
